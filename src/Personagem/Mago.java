@@ -28,10 +28,12 @@ public class Mago extends Personagem implements ComportamentoMagico {
 	
 	public void guardarItem() {
 		super.guardarItem();
+		System.out.print("Mago" + Mago.super.getNome() + "Está Guardando um Item\n");
 	}
 	
 	public void usarItem() {
 		super.usarItem();
+		System.out.print("Mago" + Mago.super.getNome() + "Está Usando um Item\n");
 	}
 
 }
