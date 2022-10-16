@@ -22,7 +22,7 @@ public class Cavaleiro extends Personagem implements ComportamentoHeroico{
 	}
 	
 	public void usarItem() {
-		super.usarItem();
+                super.usarItem();
 		System.out.print("Cavaleiro" + Cavaleiro.super.getNome() + "Está Usando um Item\n");
 	}
 
