@@ -1,14 +1,12 @@
 package Principal;
-import Personagem.Personagem
-import Personagem.Cavaleiro
-import Personagem.Mago
+import Personagem.Personagem;
 
 public class Principal extends javax.swing.JFrame {
-    int cont = 0;
-    Cavaleiro cv1 = new Cavaleiro();
-    Cavaleiro cv2 = new Cavaleiro();
-    Mago m1 = new Mago();
-    Mago m2 = new Mago();
+    int cont = 1;
+    Personagem cv1 = new Personagem();
+    Personagem cv2 = new Personagem();
+    Personagem m1 = new Personagem();
+    Personagem m2 = new Personagem();
     Personagem p = new Personagem();
     
     
@@ -32,7 +30,6 @@ public class Principal extends javax.swing.JFrame {
         initComponents();
         
         TextoInicial();
-        
     }
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -149,11 +146,37 @@ public class Principal extends javax.swing.JFrame {
 
     private void btEnterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btEnterActionPerformed
         switch (cont) {
+            
             case 0:
-                cv1.setNome(tfInput.getText());
-                AreaTexto.setText("Insira o nome do cavaleiro 1, cavaleiro 2\nmago 1 e mago 2 [no campo de texto]\n\n>Cavaleiro 1: " + cv1.getNome());
-                tfInput.setText("");
+                
                 break;
+                
+            
+            case 1:
+                knight1();
+                cont++;
+                break;
+                
+            case 2:
+                knight2();
+                cont++;
+                break;
+                
+            case 3:
+                mage1();
+                cont++;
+                break;
+                
+            case 4:
+                mage2();
+                cont++;
+                break;
+                
+            case 5:
+                AreaTexto.setText("SEUS HERÓIS:\n" + "Cavaleiro " + cv1.getNome()+ "\n" + "Cavaleiro " + cv2.getNome()+ "\n" + "Mago " + m1.getNome()+ "\n" + "Mago " + m2.getNome());
+                break;
+                
+            
             default:
                 Game();
         }
@@ -180,7 +203,37 @@ public class Principal extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
 
     private void TextoInicial() {
-        AreaTexto.setText("Insira o nome do cavaleiro 1, cavaleiro 2\nmago 1 e mago 2 [no campo de texto]\n\n>Cavaleiro 1");
+        AreaTexto.setText("PRESSIONE A TECLA ENTER PARA INICIAR");
+        btEnter.setEnabled(true);
+        
+    }
+    
+    private void knight1(){
+        cv1.setNome(tfInput.getText());
+        AreaTexto.setText("Insira o nome do Cavaleiro 1[no campo de texto]\n\n>Cavaleiro 1:");
+        tfInput.setText("");
+        System.out.println(cv1.getNome());
+    }
+    
+    private void knight2(){
+        cv2.setNome(tfInput.getText());
+        AreaTexto.setText("Insira o nome do Cavaleiro 2[no campo de texto]\n\n>Cavaleiro 2:");
+        tfInput.setText("");
+        System.out.println(cv2.getNome());
+    }
+    
+    private void mage1(){
+        m1.setNome(tfInput.getText());
+        AreaTexto.setText("Insira o nome do Mago 1[no campo de texto]\n\n>Mago 1:");
+        tfInput.setText("");
+        System.out.println(m1.getNome());
+    }
+    
+    private void mage2(){
+        m2.setNome(tfInput.getText());
+        AreaTexto.setText("Insira o nome do Mago 2[no campo de texto]\n\n>Mago 2:");
+        tfInput.setText("");
+        System.out.println(m2.getNome());
     }
 
     private void Game() {
