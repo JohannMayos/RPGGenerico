@@ -1,7 +1,16 @@
 package Principal;
+import Personagem.Personagem
+import Personagem.Cavaleiro
+import Personagem.Mago
 
 public class Principal extends javax.swing.JFrame {
     int cont = 0;
+    Cavaleiro cv1 = new Cavaleiro();
+    Cavaleiro cv2 = new Cavaleiro();
+    Mago m1 = new Mago();
+    Mago m2 = new Mago();
+    Personagem p = new Personagem();
+    
     
     private static void LookAndFeel() {
         try {
@@ -23,6 +32,7 @@ public class Principal extends javax.swing.JFrame {
         initComponents();
         
         TextoInicial();
+        
     }
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -140,7 +150,9 @@ public class Principal extends javax.swing.JFrame {
     private void btEnterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btEnterActionPerformed
         switch (cont) {
             case 0:
-                
+                cv1.setNome(tfInput.getText());
+                AreaTexto.setText("Insira o nome do cavaleiro 1, cavaleiro 2\nmago 1 e mago 2 [no campo de texto]\n\n>Cavaleiro 1: " + cv1.getNome());
+                tfInput.setText("");
                 break;
             default:
                 Game();
@@ -169,7 +181,6 @@ public class Principal extends javax.swing.JFrame {
 
     private void TextoInicial() {
         AreaTexto.setText("Insira o nome do cavaleiro 1, cavaleiro 2\nmago 1 e mago 2 [no campo de texto]\n\n>Cavaleiro 1");
-        
     }
 
     private void Game() {
