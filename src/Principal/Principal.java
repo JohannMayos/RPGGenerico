@@ -29,9 +29,8 @@ public class Principal extends javax.swing.JFrame {
     }
 
     public Principal() {
-        initComponents();
-        
-        TextoInicial();
+       initComponents();
+       TextoInicial();
     }
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -150,22 +149,19 @@ public class Principal extends javax.swing.JFrame {
         switch (cont) {
             
             case 0:
-                knight1();
-                
+              knight1();
+              break;
                 
             case 1:
                 knight2();
-               
                 break;
                 
             case 2:
                 mage1();
-                
                 break;
                 
             case 3:
                 mage2();
-               
                 break;
                 
             case 4:
@@ -177,6 +173,7 @@ public class Principal extends javax.swing.JFrame {
         }
         
         cont++;
+        
     }//GEN-LAST:event_btEnterActionPerformed
 
     public static void main(String args[]) {
@@ -200,7 +197,7 @@ public class Principal extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
 
     private void TextoInicial() {
-        AreaTexto.setText("Insira o nome do Cavaleiro 1[no campo de texto]\n\n>Cavaleiro 1:");
+        
     }
     
     private void knight1(){
