@@ -2,11 +2,13 @@ package Principal;
 import Personagem.Personagem;
 
 public class Principal extends javax.swing.JFrame {
-    int cont = 1;
+    int cont = 0;
     Personagem cv1 = new Personagem();
     Personagem cv2 = new Personagem();
     Personagem m1 = new Personagem();
     Personagem m2 = new Personagem();
+    Personagem d1 = new Personagem("Jefferson");
+    Personagem d2 = new Personagem("José");
     Personagem p = new Personagem();
     
     
@@ -148,35 +150,29 @@ public class Principal extends javax.swing.JFrame {
         switch (cont) {
             
             case 0:
-                
-                break;
-                
-            
-            case 1:
                 knight1();
                 cont++;
                 break;
                 
-            case 2:
+            case 1:
                 knight2();
                 cont++;
                 break;
                 
-            case 3:
+            case 2:
                 mage1();
                 cont++;
                 break;
                 
-            case 4:
+            case 3:
                 mage2();
                 cont++;
                 break;
                 
-            case 5:
+            case 4:
                 AreaTexto.setText("SEUS HERÓIS:\n" + "Cavaleiro " + cv1.getNome()+ "\n" + "Cavaleiro " + cv2.getNome()+ "\n" + "Mago " + m1.getNome()+ "\n" + "Mago " + m2.getNome());
                 break;
-                
-            
+             
             default:
                 Game();
         }
@@ -203,14 +199,11 @@ public class Principal extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
 
     private void TextoInicial() {
-        AreaTexto.setText("PRESSIONE A TECLA ENTER PARA INICIAR");
-        btEnter.setEnabled(true);
-        
+        AreaTexto.setText("Insira o nome do Cavaleiro 1[no campo de texto]\n\n>Cavaleiro 1:");
     }
     
     private void knight1(){
         cv1.setNome(tfInput.getText());
-        AreaTexto.setText("Insira o nome do Cavaleiro 1[no campo de texto]\n\n>Cavaleiro 1:");
         tfInput.setText("");
         System.out.println(cv1.getNome());
     }
