@@ -151,22 +151,21 @@ public class Principal extends javax.swing.JFrame {
             
             case 0:
                 knight1();
-                cont++;
-                break;
+                
                 
             case 1:
                 knight2();
-                cont++;
+               
                 break;
                 
             case 2:
                 mage1();
-                cont++;
+                
                 break;
                 
             case 3:
                 mage2();
-                cont++;
+               
                 break;
                 
             case 4:
@@ -176,6 +175,8 @@ public class Principal extends javax.swing.JFrame {
             default:
                 Game();
         }
+        
+        cont++;
     }//GEN-LAST:event_btEnterActionPerformed
 
     public static void main(String args[]) {
