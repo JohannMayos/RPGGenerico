@@ -5,11 +5,11 @@ import Personagem.Dragao;
 import Personagem.Mago;
 import Personagem.Personagem;
 import java.util.ArrayList;
-import java.util.List;
 
 public class Principal1 {
     public static void main(String args[]) {
         ArrayList<Personagem> Companies = new ArrayList<Personagem>();
+        Jogo controller = new Jogo();
         Companies.add(new Cavaleiro("Julio"));
         Companies.add(new Cavaleiro("Johann"));
         Companies.add(new Mago("Gabe"));
@@ -17,9 +17,10 @@ public class Principal1 {
         Companies.add(new Dragao("José"));
         Companies.add(new Dragao("Jefferson"));
         
-        Companies[1].getNome;
-        
-        Jogo.ControlarAcoesPersonagens();
-        
+//      
+        for(int i = 0; i < Companies.size(); i++){
+            controller.ControlarAcoesPersonagens(Companies.get(i));
+        }
+ 
     }
 }

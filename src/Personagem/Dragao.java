@@ -33,12 +33,12 @@ public class Dragao extends Personagem implements ComportamentoFeroz{
 	
 	public void guardarItem() {
 		super.guardarItem();
-		System.out.print("Dragao" + Dragao.super.getNome() + "Está Guardando um Item\n");
+		System.out.print("Dragao " + Dragao.super.getNome() + "Está Guardando um Item\n");
 	}
 	
 	public void usarItem() {
 		super.usarItem();
-		System.out.print("Dragao" + Dragao.super.getNome() + "Está usando um Item\n");
+		System.out.print("Dragao " + Dragao.super.getNome() + "Está usando um Item\n");
 	}
 
 }
