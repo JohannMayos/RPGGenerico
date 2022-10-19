@@ -14,12 +14,12 @@ public class Mago extends Personagem implements ComportamentoMagico {
 
 	@Override
 	public void invisibilidade() {
-		
+		System.out.print("Mago" + Mago.super.getNome() + "Usa o feitiço de invisibilidade\n");
 	}
 
 	@Override
 	public void ultraRapidez() {
-		
+		System.out.print("Mago" + Mago.super.getNome() + "Usa o feitiço UltraRapido\n");
 	}
 	
 	public void andar() {
